@@ -12,6 +12,7 @@ terraform {
 }
 
 resource "aws_instance" "myfirstserver" {
+  count = 3
   ami           = "ami-035827357e3c7e810"
   instance_type = "t3.micro"
   tags = {
